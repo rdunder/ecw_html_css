@@ -26,7 +26,7 @@ jobs:
           ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "dist/src/"
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
           TARGET: ${{ secrets.SSH_TARGET }}
           EXCLUDE: "/dist/src/, /node_modules/"
           SCRIPT_AFTER: |
