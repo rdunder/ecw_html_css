@@ -39,7 +39,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.SS_PORT }}
+          port: ${{ secrets.SSH_PORT }}
           source: public/
           strip_components: 1
           target: /var/www/html/ecw/html_css
