@@ -1,0 +1,57 @@
+.page-1 {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-top: 0.2rem;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        p {
+            font-size: 1.15rem;
+            text-align: center;
+            margin-top: 3ch;
+            margin-bottom: 2ch;
+        }
+
+        button {
+            background-color: #131022;
+            width: 22.8rem;
+            height: 3rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #btn-discover-more {
+            background-color: rgba(0,0,0,0);
+            width: 12rem;
+            height: 3rem;
+            margin-top: 2rem;
+            
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+
+                p {
+                    color: black;
+                    font-size: 0.9rem;
+                    margin: 0ch 0ch;
+                    align-self: center;
+                }
+            }
+        }
+    }
+    
+}

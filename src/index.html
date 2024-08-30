@@ -12,11 +12,10 @@
     <body>
         <main>
             <!-- Page 1 with header and nav -->
-            <section class="grey-bg">
+            <section class="grey-bg page-1 page">
                 <nav>
                     <div>
                         <a href="#silicon"><img src="./Assets/top-logo.svg" /></a>
-
                         <a class="hidden-on-tablet" href="#Features">Features</a>
                     </div>
                     <div>
@@ -25,17 +24,51 @@
                             <input id="theme-toggle" type="checkbox">
                             <span class="slider"></span>
                         </label>
-
-                        <button class="hidden-on-tablet">Sign in / up</button>
+                        <!-- Hamburger nav button, work in progress -->
+                        <!-- <div class="mobile-nav">
+                            <a href="#Features">Features</a>
+                            <a href="#Sign in / up">Sign in / up</a>
+                        </div> -->
+                        <img class="hidden-on-desktop" src="./Assets/p1 hamburger.svg" />
+                        <button class="hidden-on-tablet">
+                            <span>
+                                <img src="./Assets/p1 icon user button.svg" />
+                                <p>Sign in / up</p>
+                            </span>
+                        </button>
                     </div>
-
                 </nav>
 
+                <h1>Manage All Your Money in One App</h1>
+
+                <div class="content">
+                    <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
+
+                    <div class="btn-container">
+                        <button class="btn-appstore">
+                            <span>
+                                <img src="./Assets/p1 raw logo appstore.svg" />
+                            </span>
+                        </button>
+                        <button class="btn-appstore">
+                            <span>
+                                <img src="./Assets/p1 raw logo googleplay.svg" />
+                            </span>
+                        </button>
+                    </div>
+                    
+                    <button id="btn-discover-more">
+                        <span>
+                            <img src="./Assets/p1 next button.svg" />
+                            <p>Discover More</p>                         
+                        </span>
+                    </button>
+                </div>                
             </section>
 
             <!-- Page 2  -->
             <section>
-
+                <h2>App Features</h2>
             </section>
 
             <!-- Page 3 -->
