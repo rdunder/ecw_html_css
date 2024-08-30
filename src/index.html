@@ -7,41 +7,47 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
-        <header>
-            <nav>
-                <div>
-                    <img class="mlr" src="./Assets/top-logo.svg" />
-                    <a class="mlr" href="#features">Features</a>
-                </div>
-                <div>
-                    <label class="theme-switch mlr">
-                        <span class="slider">Dark Mode</span>
-                        <input type="checkbox">                    
-                    </label>
+        <main>
+            <!-- Page 1 with header and nav -->
+            <section class="grey-bg">
+                <nav>
+                    <div>
+                        <a href="#silicon"><img src="./Assets/top-logo.svg" /></a>
 
-                    <button class="mlr">Sign up</button>
-                </div>
-            </nav>
+                        <a class="hidden-on-tablet" href="#Features">Features</a>
+                    </div>
+                    <div>
+                        <p class="hidden-on-mobile">Dark Mode</p>
+                        <label class="switch">
+                            <input id="theme-toggle" type="checkbox">
+                            <span class="slider"></span>
+                        </label>
 
-            <h1>Manage All Your Money In One App</h1>            
+                        <button class="hidden-on-tablet">Sign in / up</button>
+                    </div>
 
-            <div class="app-store-container">
-                <div>
-                    <p>We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
-                    <a href="#apple"><img src="./Assets/p1 logo appstore.svg" /></a>
-                    <a href="#google"><img src="./Assets/p1 logo googleplay.svg" /></a>
-                </div>
-                <div>
-                    <img src="./Assets/p1 img iPhone 12 Pro.svg" />
-                </div>
-            </div>
+                </nav>
 
-        </header>
-        
+            </section>
+
+            <!-- Page 2  -->
+            <section>
+
+            </section>
+
+            <!-- Page 3 -->
+            <section class="grey-bg">
+
+            </section>
+
+            <!-- Page 4 -->
+            <section>
+
+            </section>
+        </main>        
         <script src="" async defer></script>
     </body>
 </html>
-

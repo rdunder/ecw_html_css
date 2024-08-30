@@ -1,0 +1,50 @@
+@import "./fonts";
+@import "./nav";
+@import "./themetoggle";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    color: #0B0F19;
+}
+
+main {
+    width: 100vw;
+}
+
+section {
+    height: 62vh;
+    border: 1px solid black;
+}
+
+.grey-bg {
+    background: radial-gradient(118% 116.18% at 50% 100%, rgba(99, 102, 241, 0.10) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
+}
+
+.hidden-on-mobile {
+    display: none;
+}
+
+.hidden-on-tablet {
+    display: none;
+}
+
+// swapping to tablet
+@media (min-width: 765px) {
+    .hidden-on-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 1100px) {
+    .hidden-on-tablet {
+        display: block;
+    }
+}
