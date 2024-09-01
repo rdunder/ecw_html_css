@@ -43,8 +43,12 @@
             }
 
             button {
-                width: 7.9rem;
-                height: 2.7rem;
+                width: 8rem;
+                height: 2.7rem;                
+
+                img {
+                    transform: scale(0.7, 0.7);
+                }
             }
         }
     }

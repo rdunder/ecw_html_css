@@ -8,12 +8,28 @@
 body {
   font-family: "Manrope", sans-serif;
   font-weight: 400;
-  color: #0B0F19;
 }
 
 a {
   text-decoration: none;
-  color: #0B0F19;
+  color: #585C7B;
+}
+
+h1 {
+  color: #131022;
+  font-size: 2.2rem;
+}
+
+h2 {
+  color: #131022;
+}
+
+h3 {
+  color: #131022;
+}
+
+p {
+  color: #585C7B;
 }
 
 main {
@@ -31,7 +47,6 @@ section {
 }
 .page-1 h1 {
   text-align: center;
-  font-size: 2.2rem;
   margin-top: 0.2rem;
 }
 .page-1 .content {
@@ -47,10 +62,13 @@ section {
 }
 .page-1 .content button {
   background-color: #131022;
-  width: 22.8rem;
+  width: 90vw;
   height: 3rem;
   margin-top: 1rem;
   border-radius: 8px;
+}
+.page-1 .content button img {
+  transform: scale(0.9, 0.9);
 }
 .page-1 .content .btn-container {
   display: flex;
@@ -69,10 +87,15 @@ section {
   gap: 1.5rem;
 }
 .page-1 .content #btn-discover-more span p {
-  color: black;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin: 0ch 0ch;
   align-self: center;
+}
+
+.page-2 .logo-container img {
+  border: 0.5px solid black;
+  width: 8.8rem;
+  height: 2rem;
 }
 
 nav {
@@ -173,8 +196,11 @@ nav div input:checked + .slider:before {
     gap: 1rem;
   }
   .page-1 .content button {
-    width: 7.9rem;
+    width: 8rem;
     height: 2.7rem;
+  }
+  .page-1 .content button img {
+    transform: scale(0.7, 0.7);
   }
 }
 @media (min-width: 1900px) {

@@ -3,11 +3,26 @@
 body {
     font-family: "Manrope", sans-serif;
     font-weight: 400;
-    color: $main-text-color;
 }
 
 a {
     text-decoration: none;
-    color: $main-text-color;
+    color: $p-text-color;
 }
 
+h1 {
+    color: $heading-text-color;
+    font-size: $h1-fontsize-mobile;
+}
+
+h2 {
+    color: $heading-text-color;
+}
+
+h3 {
+    color: $heading-text-color;
+}
+
+p {
+    color: $p-text-color;
+}
