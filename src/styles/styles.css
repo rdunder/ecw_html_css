@@ -46,6 +46,15 @@ p {
   display: block;
 }
 
+button {
+  width: 8.7rem;
+  height: 2.3rem;
+  border: none;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 5px;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -67,6 +76,9 @@ nav div button span {
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+nav div button span p {
+  color: white;
 }
 nav div .switch {
   position: relative;
@@ -274,6 +286,58 @@ section {
     max-width: 203px;
   }
 }
+.page-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 0rem;
+}
+.page-6 h2 {
+  padding: 0 2rem;
+}
+.page-6 p {
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  font-size: 1.15rem;
+}
+.page-6 .accordion {
+  max-width: 420px;
+  text-align: left;
+}
+.page-6 article {
+  border: 1px solid #e2e5f1;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em auto;
+}
+.page-6 article label {
+  display: flex;
+}
+.page-6 article p {
+  color: black;
+  font-size: 1rem;
+}
+.page-6 article .article-content p {
+  font-size: 0.875rem;
+  color: #585C7B;
+}
+.page-6 input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: fixed;
+  top: -100vh;
+  left: -100vh;
+}
+.page-6 input[type=radio] ~ div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.page-6 input[type=radio]:checked ~ div {
+  max-height: 200px;
+}
+
 @media (min-width: 765px) {
   .hidden-on-mobile {
     display: block;
@@ -318,12 +382,4 @@ section {
   nav div label {
     margin-right: 2rem;
   }
-}
-button {
-  width: 8.7rem;
-  height: 2.3rem;
-  border: none;
-  background-color: #6366F1;
-  color: white;
-  border-radius: 5px;
 }/*# sourceMappingURL=styles.css.map */

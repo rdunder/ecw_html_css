@@ -1,0 +1,77 @@
+.page-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    padding: 4rem 0rem;
+
+    h2 {
+        padding: 0 2rem;
+    }
+
+    h3 {
+        //font-size: 1rem;
+    }
+
+    p {
+        padding: 1rem 1.5rem 2rem 1.5rem ;
+        font-size: $p-fontsize-large;
+    }
+
+    // *, *::before, *::after {
+    //     padding: 0;
+    //     margin: 0 auto;
+    //     box-sizing: border-box;
+    //   }
+
+
+    .accordion {
+        max-width: 420px;
+        text-align: left;
+    }
+      
+    article {
+        border: 1px solid #e2e5f1;
+        border-radius: 8px;
+        padding: 1em;
+        margin: 1em auto;
+
+        label {
+            display: flex;
+            img {
+                
+            }
+        }
+
+        p {
+            color: black;
+            font-size: $p-fontsize-medium;
+        }
+
+        .article-content {
+            p {
+                font-size: $p-fontsize-small;
+                color: $p-text-color;
+            }
+        }
+    }
+      
+
+    input[type="radio"] {
+        appearance: none;
+        position: fixed;
+        top: -100vh;
+        left: -100vh;
+
+        & ~ div {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s;
+        }
+        
+        &:checked ~ div {
+            max-height: 200px;
+        }
+    }
+}
