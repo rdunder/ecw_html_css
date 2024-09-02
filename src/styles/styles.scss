@@ -3,11 +3,16 @@
 @import "./base/variables";
 @import "./base/mixins";
 @import "./base/typography";
+@import "./base/utility";
 
 // Layouts
 @import "./layouts/layouts";
 @import "./layouts/page1";
 @import "./layouts/page-2";
+@import "./layouts/page-3";
+@import "./layouts/page-4";
+@import "./layouts/page-5";
+@import "./layouts/page-6";
 
 // Components
 @import "./components/nav";

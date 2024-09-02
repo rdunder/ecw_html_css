@@ -1,14 +1,3 @@
-.hidden-on-mobile {
-    display: none;
-}
-
-.hidden-on-tablet {
-    display: none;
-}
-
-.hidden-on-desktop {
-    display: block;
-}
 
 // swapping to tablet
 @media (min-width: 765px) {
@@ -52,6 +41,8 @@
             }
         }
     }
+
+    
 }
 
 // swapping to desktop
