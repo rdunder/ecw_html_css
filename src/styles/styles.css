@@ -46,15 +46,6 @@ p {
   display: block;
 }
 
-button {
-  width: 8.7rem;
-  height: 2.3rem;
-  border: none;
-  background-color: #6366F1;
-  color: white;
-  border-radius: 5px;
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -70,6 +61,14 @@ nav div label {
 }
 nav div p {
   margin-right: 1rem;
+}
+nav div button {
+  width: 8.7rem;
+  height: 2.3rem;
+  border: none;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 5px;
 }
 nav div button span {
   display: flex;
@@ -161,6 +160,7 @@ section {
   width: 90vw;
   height: 3rem;
   margin-top: 1rem;
+  border: none;
   border-radius: 8px;
 }
 .page-1 .content button img {
@@ -291,31 +291,46 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 4rem 0rem;
-}
-.page-6 h2 {
-  padding: 0 2rem;
+  padding-top: 3rem;
 }
 .page-6 p {
   padding: 1rem 1.5rem 2rem 1.5rem;
   font-size: 1.15rem;
 }
 .page-6 .accordion {
-  max-width: 420px;
   text-align: left;
-}
-.page-6 article {
-  border: 1px solid #e2e5f1;
   border-radius: 8px;
-  padding: 1em;
-  margin: 1em auto;
+  border: 1px solid #e2e5f1;
 }
 .page-6 article label {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 1.9rem 1rem 1.9rem;
+}
+.page-6 article label #btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #f3f6ff;
+}
+.page-6 article h3 {
+  margin-right: 1.5rem;
+  font-size: 1rem;
 }
 .page-6 article p {
   color: black;
   font-size: 1rem;
+}
+.page-6 article .article-content {
+  border: 1px solid #e2e5f1;
 }
 .page-6 article .article-content p {
   font-size: 0.875rem;
@@ -335,7 +350,106 @@ section {
   transition: max-height 0.5s;
 }
 .page-6 input[type=radio]:checked ~ div {
-  max-height: 200px;
+  max-height: 500px;
+}
+.page-6 .btn-contact-us {
+  width: 9rem;
+  height: 3rem;
+  border: none;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 5px;
+  margin-top: 3.5rem;
+}
+.page-6 .btn-contact-us span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-6 .card-subscribe {
+  border: none;
+  border-radius: 8px;
+  background-color: #f3f6ff;
+  margin-top: 3.5rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.page-6 .card-subscribe div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  padding: 2rem 0rem;
+}
+.page-6 .card-subscribe div h2 {
+  font-size: 1.3rem;
+}
+.page-6 .card-subscribe .input-form {
+  display: flex;
+  align-items: center;
+}
+.page-6 .card-subscribe .input-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+  outline: none;
+  background-color: white;
+  height: 3rem;
+}
+.page-6 .card-subscribe .text-input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  outline: none;
+  height: 3rem;
+  color: #585C7B;
+}
+.page-6 .card-subscribe .submit-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 3rem;
+}
+.page-6 .card-subscribe .submit-button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 765px) {
+  .page-6 h2 {
+    font-size: 2rem;
+    max-width: 15ch;
+  }
+  .page-6 .btn-contact-us {
+    display: none;
+  }
+  .page-6 .card-subscribe {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .page-6 .card-subscribe div {
+    align-items: center;
+  }
+  .page-6 .card-subscribe div h2 {
+    font-size: 1.4rem;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 3rem 0;
 }
 
 @media (min-width: 765px) {
