@@ -14,33 +14,7 @@
         }
     }
 
-    .page-1 {
-
-        h1 {
-            font-size: 2.75rem;
-            max-width: 442px;
-            align-self: center;
-            margin-top: 3rem;      
-        }
-
-        .content {
-            align-items: flex-start;
-
-            .btn-container {
-                flex-direction: row;
-                gap: 1rem;
-            }
-
-            button {
-                width: 8rem;
-                height: 2.7rem;                
-
-                img {
-                    transform: scale(0.7, 0.7);
-                }
-            }
-        }
-    }
+    
 
     
 }

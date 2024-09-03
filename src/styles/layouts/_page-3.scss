@@ -40,6 +40,10 @@
 
         .p3-btxt {
             max-width: 35rem;
+
+            span {
+                display: inline;
+            }
         }
     }
 }
