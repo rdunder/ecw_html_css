@@ -5,8 +5,10 @@
     text-align: center;
     padding-top: 3rem;
 
-    h2 {
-        //padding: 0 2rem;
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     p {
@@ -14,23 +16,14 @@
         font-size: $p-fontsize-large;
     }
 
-    // *, *::before, *::after {
-    //     padding: 0;
-    //     margin: 0 auto;
-    //     box-sizing: border-box;
-    //   }
-
 
     .accordion {
-        //max-width: 420px;
         text-align: left;
         border-radius: 8px;
         border: 1px solid #e2e5f1;
     }
       
     article {
-        //padding: 1em;
-        //margin: 1em auto;
 
         label {
             display: flex;
@@ -93,6 +86,48 @@
         }
     }
 
+    .contact-card-container {
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+
+        .contact-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+
+            border: 1px solid #E2E5F1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            
+
+            p, a {
+                padding: 0;
+                font-size: $p-fontsize-small;
+            }
+        }
+
+        .card-1 {
+            a {
+                color: #6366F1;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        .card-2 {
+            a {
+                color: #22C55E;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+
     .btn-contact-us {
         width: 9rem;
         height: 3rem;
@@ -101,7 +136,7 @@
         color: white;
         border-radius: 5px;
 
-        margin-top: 3.5rem;
+        margin-bottom: 3rem;
         
         span {
             display: flex;
@@ -114,7 +149,7 @@
         border: none;
         border-radius: 8px;
         background-color: #f3f6ff;
-        margin-top: 3.5rem;
+        //margin-top: 3.5rem;
         padding: 2rem 1rem;
 
         display: flex;
