@@ -274,16 +274,22 @@ section {
 .page-3 img {
   max-width: 270px;
 }
+.page-3 .p3-btxt {
+  max-width: 25rem;
+}
 
 @media (min-width: 765px) {
-  .img-container {
+  .page-3 .img-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     max-width: 610px;
   }
-  .img-container img {
+  .page-3 .img-container img {
     max-width: 203px;
+  }
+  .page-3 .p3-btxt {
+    max-width: 35rem;
   }
 }
 .page-6 {
@@ -297,6 +303,9 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.page-6 .faq-container .heading {
+  max-width: 22rem;
 }
 .page-6 p {
   padding: 1rem 1.5rem 2rem 1.5rem;
@@ -360,14 +369,16 @@ section {
 .page-6 .contact-card-container {
   width: 100%;
   padding: 2rem;
-  display: flex;
+  display: none;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 .page-6 .contact-card-container .contact-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
+  flex-grow: 1;
   border: 1px solid #E2E5F1;
   border-radius: 8px;
   padding: 1.5rem;
@@ -395,7 +406,7 @@ section {
   background-color: #6366F1;
   color: white;
   border-radius: 5px;
-  margin-bottom: 3rem;
+  margin: 3rem;
 }
 .page-6 .btn-contact-us span {
   display: flex;
@@ -465,7 +476,9 @@ section {
 @media (min-width: 765px) {
   .page-6 h2 {
     font-size: 2rem;
-    max-width: 15ch;
+  }
+  .page-6 .contact-card-container {
+    display: flex;
   }
   .page-6 .btn-contact-us {
     display: none;
