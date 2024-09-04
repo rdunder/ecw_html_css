@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100vw;
+    padding: 1rem 5rem;
+}
+
+.text-1 {
+    margin: 1vh auto;
+}
+
+/* frist letter fungerar EJ i Firefox */
+.text-1::first-letter {
+    font-weight: 900;
+    initial-letter: 3;
+}
+
+.text-1::first-line {
+    font-weight: 800;
+    color: #333;
+}
+
+
+.t-container {
+    margin-top: 5rem;
+    container-type: inline-size;
+    container-name: text;
+
+    p {
+        max-width: 50vw;
+    }
+
+    /* fungerar EJ!! vet ej varför */
+    h2[data-sign]::before {
+        content: atr(data-sign);
+    }
+
+    p::after {
+        content: '';
+        display: block;
+        width: 90%;
+        height: 10px;
+        background-color: #333;
+        border-radius: 10px;
+    }
+}
+
+@container text (width < 200px) {
+    h2::after {
+        content: " t-container < 200 px";
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: #444;
+    }
+
+    p {
+        display: flex;
+    }
+
+    p::after {
+        content: 'hej hejdå';
+    }
+}
+
+
+
+
+

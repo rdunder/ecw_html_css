@@ -1,0 +1,102 @@
+/* 
+To use container queries we need to spceify the container type.
+size = this gives us both width and height
+inline-size = this gives us only the width
+
+in media queries.
+min-width: 500px == width > 500px
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.wrapper {
+    padding-inline: 3rem;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 5rem;
+}
+
+header {
+    container-type: inline-size;
+    container-name: header;
+
+    h1 {
+        margin-block: 2rem;
+        font-size: 2.5rem;
+    }
+
+    p {
+        margin-block: 2rem;
+    }
+}
+
+.cards {
+    display: grid;
+    gap: 2rem;
+
+    
+    container-type: inline-size;
+}
+
+.card {
+    background-color: #222;
+    padding: 1rem;
+    border: 0.5px solid black;
+
+    display: grid;
+    gap: 1rem;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .img-container {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+@media (width > 750px) {
+    .wrapper {
+        grid-template-columns: 1fr 400px;
+    }
+}
+
+@container header (width > 700px) {
+    .card {
+        background-color: hotpink;
+
+        .img-container {
+            width: 70cqw;
+        }
+    }    
+}
+
+@container (width > 600px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h2 {
+        grid-column: 1 / -1;
+    }
+}
