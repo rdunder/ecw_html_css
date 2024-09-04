@@ -1,0 +1,47 @@
+// Color theme
+$gray100: #F3F6FF;
+$gray200: #EFF2FC;
+$gray300: #E2E5F1;
+$gray400: #D4D7E5;
+$gray500: #B4B7C9;
+$gray600: #9397AD;
+$gray700: #565973;
+$gray800: #33354D;
+$gray900: #0B0F19;
+
+$brandPrimary: #6366F1;
+$brandPrimaryGradient: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
+
+$systemError: #EF4444;
+$systemSuccess: #22C55E;
+$systemWarning: #FFBA08;
+$systemInfo: #4C82F7;
+
+$boxShadowSmall: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+$boxShadoLarge: 0px 4.8px 24.4px -6px rgba(19, 16, 34, 0.10), 0px 4px 13px -2px rgba(19, 16, 34, 0.06);
+$boxShadowBrandBtn: 0px 8px 18px -8px rgba(99, 102, 241, 0.90);
+$filterDropShadow: drop-shadow(0px 4px 9px rgba(19, 16, 34, 0.03)) drop-shadow(0px 4.4px 20px rgba(19, 16, 34, 0.05));
+$boxShadowSecondary: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+
+
+// Light theme colors
+$lightHeaderGradient: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.10) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
+$lightBgGray: $gray100;
+
+$lightNavigation: $gray800;
+$lightNavigationHover: $brandPrimary;
+
+$lightHeadingColor: $gray900;
+$lightBodyTextColor: $gray700;
+
+
+// Dark theme colors
+$darkHeaderGradient: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.10) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
+$darkBgPrimary: $gray900;
+$darkBgSecondary: #151822; // Used colorpicker instead of using opacity: 0.04 on white
+
+$darkNavigation: #dbdbdd; // Used colorpicker instead of using opacity: 0.85 on white
+$darkNavigationHover: $brandPrimary;
+
+$darkHeadingColor: #fff; // just plain white
+$darkBodyTextColor: #b5b7ba; // Used colorpicker instead of using opacity: 0.7 on white
