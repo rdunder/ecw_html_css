@@ -21,20 +21,25 @@ body {
     justify-content: center;
 }
 
-h1 {
-    text-align: center;
-    padding: 4rem 2rem;
-
-    &::first-letter {
-        font-size: 4rem;
-    }
+.cs-wrapper {
+    margin: 5rem auto;
+    display: inline-block;
 
     &::after {
         content: "";
         display: inline-block;
-        height: 0.3rem;
-        width: 90%;
-        background-color: #999;
+        height: 0.2rem;
+        width: 100%;
+        background-color: #bbb;
         border-radius: 8px;
     }
+
+    h1 {
+        display: inline-block;
+    
+        &::first-letter {
+            font-size: 4rem;
+        }        
+    }
 }
+

@@ -9,18 +9,21 @@ body {
   justify-content: center;
 }
 
-h1 {
-  text-align: center;
-  padding: 4rem 2rem;
+.cs-wrapper {
+  margin: 5rem auto;
+  display: inline-block;
 }
-h1::first-letter {
-  font-size: 4rem;
-}
-h1::after {
+.cs-wrapper::after {
   content: "";
   display: inline-block;
-  height: 0.3rem;
-  width: 90%;
-  background-color: #999;
+  height: 0.2rem;
+  width: 100%;
+  background-color: #bbb;
   border-radius: 8px;
+}
+.cs-wrapper h1 {
+  display: inline-block;
+}
+.cs-wrapper h1::first-letter {
+  font-size: 4rem;
 }/*# sourceMappingURL=styles.css.map */
