@@ -16,6 +16,11 @@
 @import "./layouts/footer";
 
 
+body {
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
     padding: 4rem 2rem;
@@ -28,7 +33,7 @@ h1 {
         content: "";
         display: inline-block;
         height: 0.3rem;
-        width: 80%;
+        width: 90%;
         background-color: #999;
         border-radius: 8px;
     }
