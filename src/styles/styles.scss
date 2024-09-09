@@ -15,26 +15,3 @@
 @import "./layouts/section-6";
 @import "./layouts/footer";
 
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-h1 {
-    text-align: center;
-    padding: 4rem 2rem;
-
-    &::first-letter {
-        font-size: 4rem;
-    }
-
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 0.3rem;
-        width: 90%;
-        background-color: #999;
-        border-radius: 8px;
-    }
-}
