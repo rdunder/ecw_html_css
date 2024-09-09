@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 
-root {
+:root {
+    --color-white: #fff;
     --gray-100: #F3F6FF;
     --gray-200: #EFF2FC;
     --gray-300: #E2E5F1;
@@ -11,7 +12,7 @@ root {
     --gray-700: #565973;
     --gray-800: #33354D;
     --gray-900: #0B0F19;
-    --primary: #6366F1;
+    --color-primary: #6366F1;
     --system-error: #EF4444;
     --system-success: #22C55E;
     --system-warning: #FFBA08;
@@ -39,6 +40,21 @@ a {
 a:hover {
     color: var(--primary);
     text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 8px;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+}
+.btn-primary:hover {
+    
 }
 
 
