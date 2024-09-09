@@ -1,0 +1,100 @@
+@use "../abstracts/variables";
+@use "../components/darkmode-switch";
+@use "../components/btn-primary";
+@use "../components/btn-mobile";
+@use "../components/btn-app-store";
+
+.header {
+    background-image: variables.$lightHeaderGradient;
+    
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 1.5rem;
+
+    nav {
+        display: none;
+    }
+
+    .theme-toggle {
+        .label {
+            display: none;
+        }
+    }
+
+    #auth-login {
+        display: none;
+    }
+}
+
+.header-content {
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-top: 3rem;
+
+    h1 {
+        //grid-area: h1-text;
+        max-width: 90vw;
+        text-align: center;
+    }
+
+    p {
+        //grid-area: p-text;
+        font-size: variables.$l-text;
+        text-align: center;
+    }
+
+
+    .btn-discover-more {
+        //grid-area: btn-disc;
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .iphone-header-img {
+        //grid-area: iphone;
+        display: none;
+    }
+}
+
+
+@media (min-width: variables.$mqMedium) {
+    .navbar {
+        gap: 3rem;
+        .theme-toggle {
+            .label {
+                display: inline-block;
+            }
+        }
+    }
+
+    .header-content {
+        
+        h1 {
+            font-size: variables.$h1-m-fontsize;
+        }
+
+        .iphone-header-img {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: variables.$mqLarge) {
+    .header-content {
+        h1 {
+            font-size: variables.$h1-l-fontsize;
+        }
+    }
+}

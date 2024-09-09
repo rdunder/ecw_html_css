@@ -1,29 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@use "../abstracts/variables" as *;
 
-body {
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
+a {
+    color: $gray800;
+    font-weight: $semibold;
+    text-decoration: none;
+
+    &:hover {
+        color: $brandPrimary;
+    }
 }
 
 h1 {
-
+    font-size: $h1-s-fontsize;
+    color: $gray900;
 }
 
-h2 {
 
-}
-
-h3 {
-
-}
-
-p {
-
-}
-
-a {
-
-}
