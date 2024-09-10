@@ -1,45 +1,7 @@
-
-// Base
-@import "./base/reset";
-@import "./base/variables";
-@import "./base/mixins";
-@import "./base/typography";
-
-// Layouts
-@import "./layouts/nav-bar";
-@import "./layouts/section-1";
-@import "./layouts/section-2";
-@import "./layouts/section-3";
-@import "./layouts/section-4";
-@import "./layouts/section-5";
-@import "./layouts/section-6";
-@import "./layouts/footer";
+@use "./base/reset";
+@use "./base/body";
+@use "./base/typography";
 
 
-body {
-    display: flex;
-    justify-content: center;
-}
-
-.cs-wrapper {
-    margin: 5rem auto;
-    display: inline-block;
-
-    &::after {
-        content: "";
-        display: inline-block;
-        height: 0.2rem;
-        width: 100%;
-        background-color: #bbb;
-        border-radius: 8px;
-    }
-
-    h1 {
-        display: inline-block;
-    
-        &::first-letter {
-            font-size: 4rem;
-        }        
-    }
-}
-
+@use "./layouts/base";
+@use "./layouts/header";

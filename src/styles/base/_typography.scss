@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+a {
+    color: $gray800;
+    font-weight: $semibold;
+    text-decoration: none;
+
+    &:hover {
+        color: $brandPrimary;
+    }
+}
+
+h1 {
+    font-size: $h1-s-fontsize;
+    color: $gray900;
+}
+
+
