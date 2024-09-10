@@ -6,7 +6,7 @@
 
 .header {
     background-image: variables.$lightHeaderGradient;
-    
+    padding-top: 1rem;    
 }
 
 .navbar {
@@ -171,11 +171,14 @@
     
 
     .header-content {
+        padding-top: 7rem;
+
         h1 {
             grid-column: 1 / 6;
-            grid-row: 1 / 3;
+            grid-row: 2 / 3;
 
             font-size: variables.$h1-l-fontsize;
+            line-height: 4.5rem;
             text-align: left;
             max-width: 33rem;
             margin: 0;
@@ -183,12 +186,12 @@
 
         p {
             grid-column: 1 / 6;
-            grid-row: 4 / 8;
+            grid-row: 4 / 5;
         }
 
         .btn-store-container {
             grid-column: 1 / 6;
-            grid-row: 9 / 11;
+            grid-row: 6 / 7;
 
             .btn-app-store {
                 height: 50px;
@@ -207,8 +210,8 @@
         }
 
         .iphone-header-img {
-            grid-column: 5 / 13;
-            grid-row: 2 / 13;
+            grid-column: 6 / 13;
+            grid-row: 1 / 13;
         }
     }
 }
