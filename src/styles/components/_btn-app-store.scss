@@ -3,7 +3,9 @@
 .btn-app-store {
     background-color: variables.$gray900;
     border-radius: 8px;
-    padding: 8.8px 125px;
+    //padding: 8.8px 125px;
+    width: 100%;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
