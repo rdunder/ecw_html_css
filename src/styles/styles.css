@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 * {
   margin: 0;
@@ -297,6 +298,27 @@ h1 {
   row-gap: 1rem;
 }
 
+/*
+Hans Brands för desktop
+.logo-container {
+display: flex;
+justify-content: space-between;
+align-items: center
+}
+
+.logo {
+border: 1px solid clr??;
+border-raius: 8px;
+height: 100px;
+width: 200px;
+
+display: flex;
+justify-content: center;
+align-items-center;
+}
+
+Lägg till en max-width på .container på tablet???
+*/
 @media (min-width: 768px) {
   .section-features {
     padding-top: 4rem;
@@ -352,5 +374,23 @@ h1 {
   }
   .section-features .logo-container .logo img {
     max-width: 115px;
+  }
+}
+.footer {
+  font-size: 0.875rem;
+  color: #9397AD;
+  padding: 1rem 0;
+}
+.footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    flex-direction: row;
+    gap: 0.5rem;
   }
 }/*# sourceMappingURL=styles.css.map */

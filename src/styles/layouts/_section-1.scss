@@ -19,6 +19,28 @@
 }
 
 
+/*
+Hans Brands för desktop
+.logo-container {
+display: flex;
+justify-content: space-between;
+align-items: center
+}
+
+.logo {
+border: 1px solid clr??;
+border-raius: 8px;
+height: 100px;
+width: 200px;
+
+display: flex;
+justify-content: center;
+align-items-center;
+}
+
+Lägg till en max-width på .container på tablet???
+*/
+
 
 
 @media (min-width: variables.$mqMedium) {

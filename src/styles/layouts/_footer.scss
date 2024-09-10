@@ -1,0 +1,22 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+
+.footer {
+    font-size: variables.$s-text;
+    color: variables.$gray600;
+    padding: 1rem 0;
+
+    .container {
+        @include mixins.flex-center-column;
+    }
+}
+
+@media (min-width: variables.$mqMedium) {
+    .footer {
+        .container {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+    }
+}
