@@ -1,0 +1,90 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+
+.section-features {
+    padding-top: 2rem;
+
+    .logo-container {
+        display: none;
+    }
+
+    .features-content {
+        text-align: center;
+        display: grid;
+        //justify-content: center;
+        row-gap: 1rem;
+        
+    }
+}
+
+
+
+
+@media (min-width: variables.$mqMedium) {
+    .section-features {
+        padding-top: 4rem;
+
+        .logo-container {      
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;            
+
+            .logo {
+                @include mixins.flex-center;
+                height: 100px;
+                width: 100%;
+
+                border: 0.5px solid #E2E5F1;
+                border-radius: 8px;
+                padding: 2rem 1rem;              
+    
+                img {
+                    max-width: 120px;
+                }
+            }
+
+            div:nth-child(5) {
+                display: none;
+            }
+            div:nth-child(6) {
+                display: none;
+            }
+        }
+
+        
+    }
+}
+
+@media (min-width: variables.$mqLarge) {
+    .section-features {
+        
+
+        .logo-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+
+            div:nth-child(5) {
+                @include mixins.flex-center;
+            }
+            div:nth-child(6) {
+                @include mixins.flex-center;
+            }
+
+            .logo {
+                @include mixins.flex-center;
+                height: 100px;
+                width: 100%;
+
+                border: 0.5px solid #E2E5F1;
+                border-radius: 8px;              
+    
+                img {
+                    max-width: 115px;
+                }
+            }
+        }
+
+        
+    }
+}
