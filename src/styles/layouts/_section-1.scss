@@ -3,43 +3,62 @@
 
 
 .section-features {
-    padding-top: 2rem;
 
     .logo-container {
         display: none;
     }
 
+    .feature-large-container {
+        .img-iphone {
+            display: none;
+        }
+    }
+
     .features-content {
         text-align: center;
+        margin-top: 2rem;
         display: grid;
         //justify-content: center;
         row-gap: 1rem;
         
     }
+
+    .feature-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 3rem auto;
+
+        .feature {     
+            text-align: left;
+            display: flex;
+    
+            p {
+                font-size: variables.$m-text;
+                margin-top: 0.6rem;
+            }
+    
+            .ft-img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                width: 3rem;
+                height: 3rem;
+                padding: 1rem;
+                background-color: variables.$gray100;
+    
+                border: 0.5px solid variables.$gray100;
+                border-radius: 8px;
+    
+                margin-right: 1rem;
+            }
+        }
+    }
+    
 }
 
 
-/*
-Hans Brands för desktop
-.logo-container {
-display: flex;
-justify-content: space-between;
-align-items: center
-}
-
-.logo {
-border: 1px solid clr??;
-border-raius: 8px;
-height: 100px;
-width: 200px;
-
-display: flex;
-justify-content: center;
-align-items-center;
-}
-
-Lägg till en max-width på .container på tablet???
-*/
 
 
 
@@ -74,13 +93,20 @@ Lägg till en max-width på .container på tablet???
             }
         }
 
-        
+        .features-content {
+            margin-top: 3rem;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 3rem;
+        }
     }
 }
 
 @media (min-width: variables.$mqLarge) {
-    .section-features {
-        
+    .section-features {               
 
         .logo-container {
             display: grid;
@@ -107,6 +133,26 @@ Lägg till en max-width på .container på tablet???
             }
         }
 
-        
+        .feature-large-container {
+            display: flex;
+            gap: 13rem;
+            margin-top: 7rem;
+
+            .img-iphone {
+                display: block;
+
+                img {
+                    height: 600px;
+                }
+            }
+
+            .features-content {
+                text-align: left;
+            }
+
+            .feature-container {
+                gap: 3.5rem;
+            }
+        }
     }
 }

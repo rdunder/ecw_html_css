@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 * {
   margin: 0;
@@ -36,7 +35,7 @@ h1 {
 
 @media (min-width: 768px) {
   .container {
-    padding: 0 3rem;
+    max-width: 720px;
   }
 }
 @media (min-width: 1200px) {
@@ -286,39 +285,45 @@ h1 {
     grid-row: 1/13;
   }
 }
-.section-features {
-  padding-top: 2rem;
-}
 .section-features .logo-container {
+  display: none;
+}
+.section-features .feature-large-container .img-iphone {
   display: none;
 }
 .section-features .features-content {
   text-align: center;
+  margin-top: 2rem;
   display: grid;
   row-gap: 1rem;
 }
-
-/*
-Hans Brands för desktop
-.logo-container {
-display: flex;
-justify-content: space-between;
-align-items: center
+.section-features .feature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 3rem auto;
+}
+.section-features .feature-container .feature {
+  text-align: left;
+  display: flex;
+}
+.section-features .feature-container .feature p {
+  font-size: 1rem;
+  margin-top: 0.6rem;
+}
+.section-features .feature-container .feature .ft-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  background-color: #F3F6FF;
+  border: 0.5px solid #F3F6FF;
+  border-radius: 8px;
+  margin-right: 1rem;
 }
 
-.logo {
-border: 1px solid clr??;
-border-raius: 8px;
-height: 100px;
-width: 200px;
-
-display: flex;
-justify-content: center;
-align-items-center;
-}
-
-Lägg till en max-width på .container på tablet???
-*/
 @media (min-width: 768px) {
   .section-features {
     padding-top: 4rem;
@@ -347,6 +352,14 @@ Lägg till en max-width på .container på tablet???
   .section-features .logo-container div:nth-child(6) {
     display: none;
   }
+  .section-features .features-content {
+    margin-top: 3rem;
+  }
+  .section-features .feature-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+  }
 }
 @media (min-width: 1200px) {
   .section-features .logo-container {
@@ -374,6 +387,23 @@ Lägg till en max-width på .container på tablet???
   }
   .section-features .logo-container .logo img {
     max-width: 115px;
+  }
+  .section-features .feature-large-container {
+    display: flex;
+    gap: 13rem;
+    margin-top: 7rem;
+  }
+  .section-features .feature-large-container .img-iphone {
+    display: block;
+  }
+  .section-features .feature-large-container .img-iphone img {
+    height: 600px;
+  }
+  .section-features .feature-large-container .features-content {
+    text-align: left;
+  }
+  .section-features .feature-large-container .feature-container {
+    gap: 3.5rem;
   }
 }
 .footer {
