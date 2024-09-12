@@ -1,0 +1,74 @@
+@use "../abstracts/variables" as var;
+
+.section-how {
+    background-color: var.$lightBgGray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    
+    h3 {
+        margin: 0 4rem;
+    }
+
+    p {
+        margin: 1rem;
+    }
+
+    img {
+        height: 550px;
+        
+    }
+
+    .content-text {
+        max-width: 25rem;
+    }
+
+    .img-container {
+
+        img:nth-child(1), img:nth-child(3) {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: var.$mqMedium) {
+    .section-how {
+        .img-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-items: center;
+            width: 100%;
+
+            img:nth-child(1), img:nth-child(3) {
+                display: block;
+            }
+
+            img {
+                height: 410px;
+            }
+        }
+
+        .p3-btxt {
+            max-width: 35rem;
+
+            span {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media (min-width: var.$mqLarge) {
+    .section-how {
+
+        .img-container {
+
+            img {
+                height: 640px;
+            }
+        }
+    }
+}
