@@ -485,6 +485,9 @@ h1 {
     height: 640px;
   }
 }
+.section-transfer {
+  padding: 5rem 0;
+}
 .section-transfer .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -535,6 +538,66 @@ h1 {
 
 @media (max-width: 1200px) {
   .section-transfer {
+    display: none;
+  }
+}
+.section-testimonial {
+  background-color: #F3F6FF;
+  padding: 5rem 0;
+}
+.section-testimonial .testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 3rem;
+}
+.section-testimonial .testimonial-container h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.section-testimonial .testimonial-container p {
+  font-size: 1.125rem;
+}
+.section-testimonial .testimonial-container .card-container {
+  display: flex;
+  gap: 1rem;
+}
+.section-testimonial .testimonial-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: white;
+  width: 400px;
+  height: 320px;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 8px;
+  position: relative;
+}
+.section-testimonial .testimonial-container .card .client-avatar {
+  display: flex;
+  gap: 1rem;
+}
+.section-testimonial .testimonial-container .card .client-avatar p {
+  font-size: 0.875rem;
+  color: #9397AD;
+}
+.section-testimonial .testimonial-container .card::before {
+  content: url("/assets/p5 icon.svg");
+  position: absolute;
+  top: 0;
+  transform: translateY(-30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #6366F1;
+  width: 45px;
+  height: 45px;
+}
+
+@media (max-width: 1200px) {
+  .section-testimonial {
     display: none;
   }
 }
