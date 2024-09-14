@@ -2,7 +2,6 @@
 
 .section-faq {
     display: flex;
-
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -15,14 +14,12 @@
 
         .heading {
             max-width: 22rem;
-        }
-    
+        }    
 
         p {
             padding: 1rem 1.5rem 2rem 1.5rem ;
             font-size: var.$l-text;
         }
-
 
         .accordion {
             text-align: left;
@@ -209,7 +206,9 @@
         }
     }
 
-/* Old version
+
+    // Old version
+    /*
     .card-subscribe {
         width: 20rem;
         border: none;
@@ -295,7 +294,7 @@
             background-color: hsl(239, 84%, 70%);
         }
     }
-*/
+    */
     
 }
 
