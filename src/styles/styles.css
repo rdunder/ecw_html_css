@@ -601,6 +601,259 @@ h1 {
     display: none;
   }
 }
+.section-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 3rem;
+}
+.section-faq .faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-faq .faq-container .heading {
+  max-width: 22rem;
+}
+.section-faq p {
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  font-size: 1.125rem;
+}
+.section-faq .accordion {
+  text-align: left;
+  border-radius: 8px;
+  border: 1px solid #e2e5f1;
+}
+.section-faq article label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.7rem 1.9rem 1rem 1.9rem;
+}
+.section-faq article label #btn-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: flex-end;
+  width: 36px;
+  height: 36px;
+  padding: 10px;
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #f3f6ff;
+}
+.section-faq article h3 {
+  margin-right: 1.5rem;
+  font-size: 1rem;
+}
+.section-faq article p {
+  color: black;
+  font-size: 1rem;
+}
+.section-faq article .article-content {
+  border: 1px solid #e2e5f1;
+}
+.section-faq article .article-content p {
+  font-size: 0.875rem;
+  color: #565973;
+}
+.section-faq input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: fixed;
+  top: -100vh;
+  left: -100vh;
+}
+.section-faq input[type=radio] ~ div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.section-faq input[type=radio]:checked ~ div {
+  max-height: 500px;
+}
+.section-faq .contact-card-container {
+  width: 100%;
+  padding: 2rem;
+  display: none;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.section-faq .contact-card-container .contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-grow: 1;
+  border: 1px solid #E2E5F1;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.section-faq .contact-card-container .contact-card p, .section-faq .contact-card-container .contact-card a {
+  padding: 0;
+  font-size: 0.875rem;
+}
+.section-faq .contact-card-container .card-1 a {
+  color: #6366F1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-faq .contact-card-container .card-2 a {
+  color: #22C55E;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.section-faq .btn-contact-us {
+  width: 9rem;
+  height: 3rem;
+  border: none;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 5px;
+  margin: 3rem;
+}
+.section-faq .btn-contact-us span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-faq .card-subscribe {
+  border: none;
+  border-radius: 8px;
+  background-color: #f3f6ff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.section-faq .card-subscribe h2 {
+  font-size: 1.3rem;
+  max-width: 13rem;
+}
+.section-faq .card-subscribe div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  padding: 2rem 0rem;
+}
+.section-faq .card-subscribe .input-form {
+  display: flex;
+  align-items: center;
+}
+.section-faq .card-subscribe .input-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  border-right: none;
+  outline: none;
+  background-color: white;
+  height: 3rem;
+}
+.section-faq .card-subscribe .text-input {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  outline: none;
+  height: 3rem;
+  color: #565973;
+  max-width: 10rem;
+}
+.section-faq .card-subscribe .submit-button {
+  width: 7rem;
+  font-size: 16px;
+  border: 0.5px solid #ccc;
+  border-left: none;
+  background-color: #6366F1;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: 3.1rem;
+}
+.section-faq .card-subscribe .submit-button:hover {
+  background-color: #0056b3;
+}
+
+@media (min-width: 768px) {
+  .section-faq h2 {
+    font-size: 2rem;
+  }
+  .section-faq .accordion {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .section-faq .accordion article {
+    border-radius: 8px;
+    box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+  }
+  .section-faq .accordion article .article-content {
+    border: none;
+  }
+  .section-faq .contact-card-container {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .section-faq .btn-contact-us {
+    display: none;
+  }
+  .section-faq .card-subscribe {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .section-faq .card-subscribe div {
+    align-items: center;
+  }
+  .section-faq .card-subscribe div h2 {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .section-faq .faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "h a" "c a";
+  }
+  .section-faq .faq-container .heading {
+    grid-area: h;
+  }
+  .section-faq .faq-container .accordion {
+    grid-area: a;
+  }
+  .section-faq .faq-container .contact-card-container {
+    grid-area: c;
+  }
+  .section-faq .card-subscribe {
+    min-width: 1195px;
+    max-width: 1320px;
+    padding: 1rem 0;
+    justify-content: space-around;
+    margin-top: 4rem;
+  }
+  .section-faq .card-subscribe div h2 {
+    font-size: 1.5rem;
+    max-width: 27rem;
+  }
+  .section-faq .card-subscribe div h2::after {
+    content: " to stay informed about latest updates";
+  }
+  .section-faq .card-subscribe .input-form .text-input {
+    min-width: 15rem;
+  }
+}
 .footer {
   font-size: 0.875rem;
   color: #9397AD;
