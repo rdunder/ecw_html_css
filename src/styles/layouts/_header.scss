@@ -4,8 +4,11 @@
 @use "../components/btn-mobile";
 @use "../components/btn-app-store";
 
+@use "../base/root-vars" as *;
+
 .header {
-    background-image: variables.$headerGradient;
+    // background-image: variables.$headerGradient;
+    background-image: var(--clr-header-bg);
     padding-top: 1rem;    
 }
 
