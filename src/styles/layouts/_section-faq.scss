@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 7rem;
 
     .faq-container {
         display: flex;
@@ -14,10 +14,12 @@
 
         .heading {
             max-width: 22rem;
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }    
 
         p {
-            padding: 1rem 1.5rem 2rem 1.5rem ;
             font-size: var.$l-text;
         }
 
@@ -64,10 +66,12 @@
     
                 .article-content {
                     border: 1px solid #e2e5f1;
+                    padding: 0.5rem;
     
                     p {
                         font-size: var.$s-text;
                         color: var.$gray700;
+                        padding: 0.5rem;
                     }
                 }    
             }
@@ -168,29 +172,23 @@
             max-width: 12rem;
         }
 
-        .input-container {               
-            //min-width: 0;
-            position: relative;
+        .input-container { 
+            display: flex;
 
             input {
+                flex-shrink: 2;
+                font-family: Manrope, sans-serif, FontAwesome;
                 width: 12rem;
                 font-size: 1rem;
-                padding: 0.8rem 0 0.8rem 3rem;
+                padding: 0.8rem 0 0.8rem 0.6rem;
                 border: 0.5px solid #ccc;
-                //border-right: none;
+                border-right: none;
                 border-radius: 8px 0 0 8px;
                 outline: none;
             }
 
-            &::before {
-                content: url("/assets/p6\ icon\ mail.svg");
-                position: absolute;
-                top: 50%;
-                left: 1rem;
-                transform: translateY(-40%);
-            }
-
             button {
+                flex-shrink: 1;
                 border: 0.5px solid var.$brandPrimary;
                 border-radius: 0 8px 8px 0;
                 background-color: var.$brandPrimary;
@@ -253,7 +251,7 @@
             .input-container {
 
                 input {
-                    padding: 1rem 0 1rem 3rem;
+                    padding: 1rem 0 1rem 0.6rem;
                 }
                 
                 button {
@@ -269,13 +267,17 @@
 
         .faq-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            //grid-template-columns: repeat(4, minmax(0, 1fr));
+            column-gap: 8rem;
             grid-template-areas: 
-                "h a"
-                "c a";
+                "h a a a"
+                "c a a a"
+                "- a a a"
+                "- a a a";
 
             .heading {
                 grid-area: h;
+                text-align: left;
             }
             .accordion {
                 grid-area: a;
@@ -303,7 +305,7 @@
             .input-container {               
 
                 input {
-                    padding: 1rem 0 1rem 3rem;
+                    padding: 1rem 0 1rem 0.6rem;
                     width: 20rem;
                 }
                 

@@ -606,7 +606,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: 3rem;
+  padding-top: 7rem;
 }
 .section-faq .faq-container {
   display: flex;
@@ -615,9 +615,11 @@ h1 {
 }
 .section-faq .faq-container .heading {
   max-width: 22rem;
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 .section-faq .faq-container p {
-  padding: 1rem 1.5rem 2rem 1.5rem;
   font-size: 1.125rem;
 }
 .section-faq .faq-container .accordion {
@@ -654,10 +656,12 @@ h1 {
 }
 .section-faq .faq-container .accordion article .article-content {
   border: 1px solid #e2e5f1;
+  padding: 0.5rem;
 }
 .section-faq .faq-container .accordion article .article-content p {
   font-size: 0.875rem;
   color: #565973;
+  padding: 0.5rem;
 }
 .section-faq .faq-container .accordion input[type=radio] {
   -webkit-appearance: none;
@@ -734,24 +738,21 @@ h1 {
   max-width: 12rem;
 }
 .section-faq .sub-container .input-container {
-  position: relative;
+  display: flex;
 }
 .section-faq .sub-container .input-container input {
+  flex-shrink: 2;
+  font-family: Manrope, sans-serif, FontAwesome;
   width: 12rem;
   font-size: 1rem;
-  padding: 0.8rem 0 0.8rem 3rem;
+  padding: 0.8rem 0 0.8rem 0.6rem;
   border: 0.5px solid #ccc;
+  border-right: none;
   border-radius: 8px 0 0 8px;
   outline: none;
 }
-.section-faq .sub-container .input-container::before {
-  content: url("/assets/p6 icon mail.svg");
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-40%);
-}
 .section-faq .sub-container .input-container button {
+  flex-shrink: 1;
   border: 0.5px solid #6366F1;
   border-radius: 0 8px 8px 0;
   background-color: #6366F1;
@@ -794,7 +795,7 @@ h1 {
     justify-content: space-evenly;
   }
   .section-faq .sub-container .input-container input {
-    padding: 1rem 0 1rem 3rem;
+    padding: 1rem 0 1rem 0.6rem;
   }
   .section-faq .sub-container .input-container button {
     padding: 1rem 0.5rem 1rem 0.5rem;
@@ -803,11 +804,13 @@ h1 {
 @media (min-width: 1200px) {
   .section-faq .faq-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "h a" "c a";
+    -moz-column-gap: 8rem;
+         column-gap: 8rem;
+    grid-template-areas: "h a a a" "c a a a" "- a a a" "- a a a";
   }
   .section-faq .faq-container .heading {
     grid-area: h;
+    text-align: left;
   }
   .section-faq .faq-container .accordion {
     grid-area: a;
@@ -829,7 +832,7 @@ h1 {
     content: " to stay informed about latest updates";
   }
   .section-faq .sub-container .input-container input {
-    padding: 1rem 0 1rem 3rem;
+    padding: 1rem 0 1rem 0.6rem;
     width: 20rem;
   }
   .section-faq .sub-container .input-container button {
