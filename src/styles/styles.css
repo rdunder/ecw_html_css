@@ -607,6 +607,93 @@ h1 {
   align-items: center;
   text-align: center;
   padding-top: 3rem;
+  /* Old version
+      .card-subscribe {
+          width: 20rem;
+          border: none;
+          border-radius: 8px;
+          background-color: #f3f6ff;
+          padding: 1rem;
+
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+
+          margin-bottom: 1rem;
+
+          h2 {
+              font-size: 1.3rem;
+              max-width: 13rem;
+          }
+
+          .heading {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              text-align: left;
+              padding: 2rem 0rem;
+
+              img {
+                  height: 4.5rem;
+              }
+          }
+
+
+
+          .input-form {
+              display: flex;
+              align-items: center;
+          }
+
+          .input-icon {
+              display: flex;
+              align-items: center;
+              padding-left: 0.5rem;
+              border: 1px solid #ccc;
+              border-radius: 8px 0 0 8px;
+              border-right: none;
+              outline: none;
+              background-color: white;
+              height: 3rem;
+
+          }
+
+          .input-container {
+              width: 0;
+              min-width: 100%;
+          }
+
+          .text-input {
+              //padding: 8px;
+              font-size: 16px;
+              border: 1px solid #ccc;
+              border-left: none;
+              //border-radius: 8px 0 0 8px;
+              outline: none;
+              height: 3rem;
+              color: var.$gray700;
+          }
+
+          .submit-button {
+              //padding: 0 0.5rem;
+              width: 7rem;
+              font-size: 16px;
+              border: 0.5px solid #ccc;
+              border-left: none;
+              background-color: #6366F1;
+              color: white;
+              border-radius: 0 8px 8px 0;
+              cursor: pointer;
+              // transition: background-color 0.3s ease;
+              height: 3.1rem;
+          }
+
+          .submit-button:hover {
+              background-color: hsl(239, 84%, 70%);
+          }
+      }
+  */
 }
 .section-faq .faq-container {
   display: flex;
@@ -616,22 +703,22 @@ h1 {
 .section-faq .faq-container .heading {
   max-width: 22rem;
 }
-.section-faq p {
+.section-faq .faq-container p {
   padding: 1rem 1.5rem 2rem 1.5rem;
   font-size: 1.125rem;
 }
-.section-faq .accordion {
+.section-faq .faq-container .accordion {
   text-align: left;
   border-radius: 8px;
   border: 1px solid #e2e5f1;
 }
-.section-faq article label {
+.section-faq .faq-container .accordion article label {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.7rem 1.9rem 1rem 1.9rem;
 }
-.section-faq article label #btn-arrow {
+.section-faq .faq-container .accordion article label #btn-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -644,22 +731,22 @@ h1 {
   z-index: -1;
   background-color: #f3f6ff;
 }
-.section-faq article h3 {
+.section-faq .faq-container .accordion article h3 {
   margin-right: 1.5rem;
   font-size: 1rem;
 }
-.section-faq article p {
+.section-faq .faq-container .accordion article p {
   color: black;
   font-size: 1rem;
 }
-.section-faq article .article-content {
+.section-faq .faq-container .accordion article .article-content {
   border: 1px solid #e2e5f1;
 }
-.section-faq article .article-content p {
+.section-faq .faq-container .accordion article .article-content p {
   font-size: 0.875rem;
   color: #565973;
 }
-.section-faq input[type=radio] {
+.section-faq .faq-container .accordion input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -667,22 +754,22 @@ h1 {
   top: -100vh;
   left: -100vh;
 }
-.section-faq input[type=radio] ~ div {
+.section-faq .faq-container .accordion input[type=radio] ~ div {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
 }
-.section-faq input[type=radio]:checked ~ div {
+.section-faq .faq-container .accordion input[type=radio]:checked ~ div {
   max-height: 500px;
 }
-.section-faq .contact-card-container {
+.section-faq .faq-container .contact-card-container {
   width: 100%;
   padding: 2rem;
   display: none;
   justify-content: space-evenly;
   gap: 2rem;
 }
-.section-faq .contact-card-container .contact-card {
+.section-faq .faq-container .contact-card-container .contact-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -692,23 +779,23 @@ h1 {
   border-radius: 8px;
   padding: 1.5rem;
 }
-.section-faq .contact-card-container .contact-card p, .section-faq .contact-card-container .contact-card a {
+.section-faq .faq-container .contact-card-container .contact-card p, .section-faq .faq-container .contact-card-container .contact-card a {
   padding: 0;
   font-size: 0.875rem;
 }
-.section-faq .contact-card-container .card-1 a {
+.section-faq .faq-container .contact-card-container .card-1 a {
   color: #6366F1;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.section-faq .contact-card-container .card-2 a {
+.section-faq .faq-container .contact-card-container .card-2 a {
   color: #22C55E;
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.section-faq .btn-contact-us {
+.section-faq .faq-container .btn-contact-us {
   width: 9rem;
   height: 3rem;
   border: none;
@@ -717,71 +804,52 @@ h1 {
   border-radius: 5px;
   margin: 3rem;
 }
-.section-faq .btn-contact-us span {
+.section-faq .faq-container .btn-contact-us span {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.section-faq .card-subscribe {
-  border: none;
-  border-radius: 8px;
+.section-faq .sub-container {
+  width: 100%;
+  height: 16rem;
   background-color: #f3f6ff;
-  padding: 1rem;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-.section-faq .card-subscribe h2 {
-  font-size: 1.3rem;
-  max-width: 13rem;
-}
-.section-faq .card-subscribe div {
+  border-radius: 8px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   text-align: left;
-  padding: 2rem 0rem;
 }
-.section-faq .card-subscribe .input-form {
-  display: flex;
-  align-items: center;
+.section-faq .sub-container h2 {
+  max-width: 12rem;
 }
-.section-faq .card-subscribe .input-icon {
-  display: flex;
-  align-items: center;
-  padding-left: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px 0 0 8px;
-  border-right: none;
-  outline: none;
-  background-color: white;
-  height: 3rem;
+.section-faq .sub-container .input-container {
+  position: relative;
 }
-.section-faq .card-subscribe .text-input {
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-left: none;
-  outline: none;
-  height: 3rem;
-  color: #565973;
-  max-width: 10rem;
-}
-.section-faq .card-subscribe .submit-button {
-  width: 7rem;
-  font-size: 16px;
+.section-faq .sub-container .input-container input {
+  width: 12rem;
+  font-size: 1rem;
+  padding: 0.8rem 0 0.8rem 3rem;
   border: 0.5px solid #ccc;
-  border-left: none;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+}
+.section-faq .sub-container .input-container::before {
+  content: url("/assets/p6 icon mail.svg");
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-40%);
+}
+.section-faq .sub-container .input-container button {
+  border: 0.5px solid #6366F1;
+  border-radius: 0 8px 8px 0;
   background-color: #6366F1;
   color: white;
-  border-radius: 0 8px 8px 0;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  height: 3.1rem;
-}
-.section-faq .card-subscribe .submit-button:hover {
-  background-color: #0056b3;
+  font-size: 1rem;
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  outline: none;
 }
 
 @media (min-width: 768px) {
@@ -809,17 +877,6 @@ h1 {
   .section-faq .btn-contact-us {
     display: none;
   }
-  .section-faq .card-subscribe {
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-  }
-  .section-faq .card-subscribe div {
-    align-items: center;
-  }
-  .section-faq .card-subscribe div h2 {
-    font-size: 1.4rem;
-  }
 }
 @media (min-width: 1200px) {
   .section-faq .faq-container {
@@ -835,23 +892,6 @@ h1 {
   }
   .section-faq .faq-container .contact-card-container {
     grid-area: c;
-  }
-  .section-faq .card-subscribe {
-    min-width: 1195px;
-    max-width: 1320px;
-    padding: 1rem 0;
-    justify-content: space-around;
-    margin-top: 4rem;
-  }
-  .section-faq .card-subscribe div h2 {
-    font-size: 1.5rem;
-    max-width: 27rem;
-  }
-  .section-faq .card-subscribe div h2::after {
-    content: " to stay informed about latest updates";
-  }
-  .section-faq .card-subscribe .input-form .text-input {
-    min-width: 15rem;
   }
 }
 .footer {
