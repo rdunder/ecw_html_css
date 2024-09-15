@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../base/root-vars" as *;
 @use "../components/darkmode-switch";
 @use "../components/btn-primary";
 @use "../components/btn-mobile";
@@ -22,12 +23,24 @@
     align-items: center;
     gap: 1.5rem;
 
+    .header-top-logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        h3 {
+            color: var(--clr-text-heading);
+            font-size: 1.28rem;
+            letter-spacing: 0.15rem;
+        }
+    }
+
     nav {
         display: none;
     }
 
     .theme-toggle {
         .label {
+            color: var(--clr-text-body);
             display: none;
         }
     }
@@ -72,6 +85,8 @@
         justify-content: center;
         gap: 1rem;
         flex-shrink: 0;
+
+        color: var(--clr-text-body)
     }
 
     .iphone-header-img {

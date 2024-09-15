@@ -52,13 +52,17 @@
             }
         }
 
-        .p3-btxt {
-            max-width: 35rem;
-
-            span {
-                display: inline;
-            }
+        h3::before {
+            content: "Step 3. "
         }
+
+        // .p3-btxt {
+        //     max-width: 35rem;
+
+        //     span {
+        //         display: inline;
+        //     }
+        // }
     }
 }
 
@@ -70,6 +74,10 @@
             img {
                 height: 640px;
             }
+        }
+
+        h3::before {
+            display: none;
         }
     }
 }

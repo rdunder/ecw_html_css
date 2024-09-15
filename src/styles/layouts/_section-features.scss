@@ -4,6 +4,8 @@
 
 
 .section-features {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     .logo-container {
         display: none;
@@ -107,7 +109,9 @@
 }
 
 @media (min-width: variables.$mqLarge) {
-    .section-features {               
+    .section-features {    
+        padding-top: 5rem;
+        padding-bottom: 5rem;           
 
         .logo-container {
             display: grid;
