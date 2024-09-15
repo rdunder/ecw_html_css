@@ -32,6 +32,9 @@
   --clr-border-accordion: var(--gray-300);
   --clr-text-input: var(--gray-500);
   --clr-footer-text: var(--gray-600);
+  --clr-btn-appstore: var(--gray-900);
+  --clr-text-btn-appstore: var(--gray-100);
+  --clr-btn-mobile-menu: var(--gray-600);
 }
 
 .clr-light {
@@ -46,6 +49,9 @@
   --clr-border-accordion: var(--gray-300);
   --clr-text-input: var(--gray-500);
   --clr-footer-text: var(--gray-600);
+  --clr-btn-appstore: var(--gray-900);
+  --clr-text-btn-appstore: var(--gray-100);
+  --clr-btn-mobile-menu: var(--gray-600);
 }
 
 .clr-dark {
@@ -60,6 +66,9 @@
   --clr-border-accordion: rgba(255, 255, 255, 0.15);
   --clr-text-input: rgba(255, 255, 255, 0.4);
   --clr-footer-text: rgba(255, 255, 255, 0.5);
+  --clr-btn-appstore: var(--gray-100);
+  --clr-text-btn-appstore: var(--gray-800);
+  --clr-btn-mobile-menu: var(--gray-100);
   background-color: var(--clr-primary-bg);
 }
 
@@ -97,6 +106,10 @@ h1, h2, h3 {
 
 p {
   color: var(--clr-text-body);
+}
+
+#theme-container {
+  transition: all 1.5s ease;
 }
 
 .container {
@@ -186,13 +199,26 @@ p {
 }
 
 .btn-app-store {
-  background-color: #0B0F19;
+  background-color: var(--clr-btn-appstore);
+  color: var(--clr-text-btn-appstore);
   border-radius: 8px;
+  padding: 0.1rem 0.1rem;
   width: 100%;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
+}
+.btn-app-store div {
+  display: flex;
+  flex-direction: column;
+}
+.btn-app-store div :nth-child(1) {
+  font-size: 0.5rem;
+}
+.btn-app-store div :nth-child(2) {
+  font-size: 0.9rem;
 }
 
 .header {
@@ -225,6 +251,9 @@ p {
 }
 .navbar #auth-login {
   display: none;
+}
+.navbar .btn-mobile {
+  color: var(--clr-btn-mobile-menu);
 }
 
 .header-content {
