@@ -1,14 +1,18 @@
 @use "../abstracts/variables";
+@use "../base/root-vars" as *;
 @use "../abstracts/mixins";
 
 
-.footer {
-    font-size: variables.$s-text;
-    color: variables.$gray600;
+.footer {        
     padding: 3rem 0;
 
     .container {
         @include mixins.flex-center-column;
+
+        p {
+            font-size: variables.$s-text;
+            color: var(--clr-footer-text);
+        }
     }
 }
 

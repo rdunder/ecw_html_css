@@ -29,6 +29,9 @@
   --clr-text-body: var(--gray-700);
   --clr-text-link: var(--gray-800);
   --clr-card-bg: white;
+  --clr-border-accordion: var(--gray-300);
+  --clr-text-input: var(--gray-500);
+  --clr-footer-text: var(--gray-600);
 }
 
 .clr-light {
@@ -40,6 +43,9 @@
   --clr-text-body: var(--gray-700);
   --clr-text-link: var(--gray-800);
   --clr-card-bg: white;
+  --clr-border-accordion: var(--gray-300);
+  --clr-text-input: var(--gray-500);
+  --clr-footer-text: var(--gray-600);
 }
 
 .clr-dark {
@@ -51,6 +57,9 @@
   --clr-text-body: rgba(255, 255, 255, 0.7);
   --clr-text-link: rgba(255, 255, 255, 0.85);
   --clr-card-bg: var(--clr-seconday-bg);
+  --clr-border-accordion: rgba(255, 255, 255, 0.15);
+  --clr-text-input: rgba(255, 255, 255, 0.4);
+  --clr-footer-text: rgba(255, 255, 255, 0.5);
   background-color: var(--clr-primary-bg);
 }
 
@@ -678,7 +687,10 @@ p {
 .section-faq .faq-container .accordion {
   text-align: left;
   border-radius: 8px;
-  border: 1px solid #e2e5f1;
+}
+.section-faq .faq-container .accordion article {
+  background-color: var(--clr-card-bg);
+  border: 1px solid var(--clr-border-accordion);
 }
 .section-faq .faq-container .accordion article label {
   display: flex;
@@ -694,26 +706,22 @@ p {
   width: 36px;
   height: 36px;
   padding: 10px;
-  border: 1px solid rgb(104, 104, 104);
+  border: none;
   border-radius: 50%;
-  z-index: -1;
-  background-color: #f3f6ff;
+  background-color: var(--clr-seconday-bg);
+  color: var(--clr-text-heading);
+  pointer-events: none;
 }
 .section-faq .faq-container .accordion article h3 {
   margin-right: 1.5rem;
   font-size: 1rem;
 }
-.section-faq .faq-container .accordion article p {
-  color: black;
-  font-size: 1rem;
-}
 .section-faq .faq-container .accordion article .article-content {
-  border: 1px solid #e2e5f1;
-  padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
 }
 .section-faq .faq-container .accordion article .article-content p {
   font-size: 0.875rem;
-  color: #565973;
+  color: var(--clr-text-body);
   padding: 0.5rem;
 }
 .section-faq .faq-container .accordion input[type=radio] {
@@ -778,7 +786,7 @@ p {
 .section-faq .sub-container {
   width: 100%;
   height: 16rem;
-  background-color: #f3f6ff;
+  background-color: var(--clr-seconday-bg);
   border-radius: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -799,14 +807,16 @@ p {
   width: 12rem;
   font-size: 1rem;
   padding: 0.8rem 0 0.8rem 0.6rem;
-  border: 0.5px solid #ccc;
+  border: 0.5px solid var(--clr-border-accordion);
   border-right: none;
   border-radius: 8px 0 0 8px;
   outline: none;
+  background-color: var(--clr-card-bg);
+  color: var(--clr-text-input);
 }
 .section-faq .sub-container .input-container button {
   flex-shrink: 1;
-  border: 0.5px solid #6366F1;
+  border: none;
   border-radius: 0 8px 8px 0;
   background-color: #6366F1;
   color: white;
@@ -893,8 +903,6 @@ p {
   }
 }
 .footer {
-  font-size: 0.875rem;
-  color: #9397AD;
   padding: 3rem 0;
 }
 .footer .container {
@@ -902,6 +910,10 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.footer .container p {
+  font-size: 0.875rem;
+  color: var(--clr-footer-text);
 }
 
 @media (min-width: 768px) {
