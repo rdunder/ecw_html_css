@@ -27,4 +27,8 @@
             font-size: 0.9rem;
         }
     }
+
+    &:hover {
+        color: var(--clr-text-btn-appstore)
+    }
 }

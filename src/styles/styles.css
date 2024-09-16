@@ -227,6 +227,9 @@ p {
 .btn-app-store div :nth-child(2) {
   font-size: 0.9rem;
 }
+.btn-app-store:hover {
+  color: var(--clr-text-btn-appstore);
+}
 
 .header {
   background-image: var(--clr-header-bg);
