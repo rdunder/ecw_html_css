@@ -82,7 +82,6 @@
     
 
     .btn-discover-more {
-        //grid-area: btn-disc;
         padding: 2rem 0;
         display: flex;
         align-items: center;
@@ -90,7 +89,29 @@
         gap: 1rem;
         flex-shrink: 0;
 
-        color: var(--clr-text-body)
+        span {
+            background-color: var(--clr-btn-chevron);
+            color: var(--clr-text-heading);
+
+            width: 3rem;
+            height: 3rem;
+            padding: 0.8rem;
+
+            border: none;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+        }
+
+        p {
+           color: var(--clr-text-body);
+           font-size: 0.875rem;
+           font-weight: 400;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     .iphone-header-img {

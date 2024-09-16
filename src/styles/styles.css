@@ -35,6 +35,7 @@
   --clr-btn-appstore: var(--gray-900);
   --clr-text-btn-appstore: var(--gray-100);
   --clr-btn-mobile-menu: var(--gray-600);
+  --clr-btn-chevron: white;
 }
 
 .clr-light {
@@ -52,6 +53,7 @@
   --clr-btn-appstore: var(--gray-900);
   --clr-text-btn-appstore: var(--gray-100);
   --clr-btn-mobile-menu: var(--gray-600);
+  --clr-btn-chevron: white;
 }
 
 .clr-dark {
@@ -69,6 +71,7 @@
   --clr-btn-appstore: var(--gray-100);
   --clr-text-btn-appstore: var(--gray-800);
   --clr-btn-mobile-menu: var(--gray-100);
+  --clr-btn-chevron: rgba(255, 255, 255, 0.05);
   background-color: var(--clr-primary-bg);
 }
 
@@ -190,6 +193,10 @@ p {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
+.btn-primary:hover {
+  cursor: pointer;
+  color: #dbe6ff;
+}
 
 .btn-mobile {
   background-color: transparent;
@@ -284,7 +291,25 @@ p {
   justify-content: center;
   gap: 1rem;
   flex-shrink: 0;
+}
+.header-content .btn-discover-more span {
+  background-color: var(--clr-btn-chevron);
+  color: var(--clr-text-heading);
+  width: 3rem;
+  height: 3rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.header-content .btn-discover-more p {
   color: var(--clr-text-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.header-content .btn-discover-more:hover {
+  cursor: pointer;
 }
 .header-content .iphone-header-img {
   display: none;
@@ -852,6 +877,9 @@ p {
   font-size: 1rem;
   padding: 0.8rem 0.5rem 0.8rem 0.5rem;
   outline: none;
+}
+.section-faq .sub-container .input-container button:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
