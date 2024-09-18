@@ -4,7 +4,7 @@
 .btn-primary {
     @include mix.flex(row, center, center);
     background-color: var(--brand-primary);
-    color: var(--gray-100);
+    color: #fff;
     border-radius: 8px;
     padding: 12px 25px;
     text-decoration: none;

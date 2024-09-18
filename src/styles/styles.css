@@ -9,7 +9,7 @@
   --gray-700: #565973;
   --gray-800: #33354D;
   --gray-900: #0B0F19;
-  --brand-primary: #6366F1;
+  --brand-primary: hsl(239, 84%, 66%);
   --brand-primary-gradient: linear-gradient(90deg, #6366F1 0%, #8B5CF6 50%, #D946EF 100%);
   --header-gradient: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.10) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
   --system-error: #EF4444;
@@ -186,7 +186,7 @@ p {
   align-items: center;
   gap: 0;
   background-color: var(--brand-primary);
-  color: var(--gray-100);
+  color: #fff;
   border-radius: 8px;
   padding: 12px 25px;
   text-decoration: none;
@@ -818,6 +818,10 @@ p {
   background-color: var(--clr-seconday-bg);
   color: var(--clr-text-heading);
   pointer-events: none;
+  transition: 200ms;
+}
+.section-faq .faq-container .accordion article label:hover {
+  cursor: pointer;
 }
 .section-faq .faq-container .accordion article h3 {
   margin-right: 1.5rem;
@@ -876,7 +880,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  color: #6366F1;
+  color: var(--brand-primary);
 }
 .section-faq .faq-container .contact-card-container .card-2 a {
   display: flex;
@@ -884,7 +888,7 @@ p {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  color: #22C55E;
+  color: var(--system-success);
 }
 .section-faq .faq-container .btn-contact-us {
   width: 9rem;
@@ -938,7 +942,7 @@ p {
   flex-shrink: 1;
   border: none;
   border-radius: 0 8px 8px 0;
-  background-color: #6366F1;
+  background-color: var(--brand-primary);
   color: white;
   font-size: 1rem;
   padding: 0.8rem 0.5rem 0.8rem 0.5rem;
