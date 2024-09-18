@@ -36,6 +36,8 @@
   --clr-text-btn-appstore: var(--gray-100);
   --clr-btn-mobile-menu: var(--gray-600);
   --clr-btn-chevron: white;
+  --mq-medium: 768px;
+  --mq-large: 1200px;
 }
 
 .clr-light {
@@ -131,7 +133,7 @@ p {
   }
 }
 .theme-toggle .label {
-  color: #33354D;
+  color: var(--gray-800);
   margin-right: 5px;
 }
 .theme-toggle .switch {
@@ -147,7 +149,7 @@ p {
   right: 0;
   bottom: 0;
   cursor: pointer;
-  background-color: #9397AD;
+  background-color: var(--gray-600);
   transition: 0.4s;
   border-radius: 34px;
 }
@@ -168,7 +170,7 @@ p {
   height: 0;
 }
 .theme-toggle .switch input:checked + span {
-  background-color: #6366F1;
+  background-color: var(--brand-primary);
 }
 .theme-toggle .switch input:focus + span {
   box-shadow: 0px 0px 5px 0.1px #2196F3;
@@ -178,13 +180,15 @@ p {
 }
 
 .btn-primary {
-  background-color: #6366F1;
-  color: #F3F6FF;
-  border-radius: 8px;
-  padding: 12px 25px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
+  background-color: var(--brand-primary);
+  color: var(--gray-100);
+  border-radius: 8px;
+  padding: 12px 25px;
   text-decoration: none;
   opacity: 1;
   transition: opacity 0.4s;
@@ -213,13 +217,17 @@ p {
   width: 100%;
   height: 50px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
 .btn-app-store div {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0;
 }
 .btn-app-store div :nth-child(1) {
   font-size: 0.5rem;
@@ -244,6 +252,8 @@ p {
 }
 .navbar .header-top-logo {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
@@ -284,14 +294,16 @@ p {
 .header-content .btn-store-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
 .header-content .btn-discover-more {
   padding: 2rem 0;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   flex-shrink: 0;
 }
@@ -560,12 +572,16 @@ p {
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
   padding: 4rem 0;
 }
 .section-how h3 {
   margin: 0 4rem;
+}
+.section-how h3::before {
+  content: "Transfers to people from your contact list";
 }
 .section-how p {
   margin: 1rem;
@@ -574,7 +590,7 @@ p {
   height: 550px;
 }
 .section-how .content-text {
-  max-width: 25rem;
+  max-width: 24rem;
 }
 .section-how .img-container img:nth-child(1), .section-how .img-container img:nth-child(3) {
   display: none;
@@ -593,8 +609,11 @@ p {
   .section-how .img-container img {
     height: 410px;
   }
+  .section-how .content-text {
+    max-width: 30rem;
+  }
   .section-how h3::before {
-    content: "Step 3. ";
+    content: "Step 3. Transfers to people from your contact list";
   }
 }
 @media (min-width: 1200px) {
@@ -602,7 +621,8 @@ p {
     height: 640px;
   }
   .section-how h3::before {
-    display: none;
+    content: "Latest transaction history";
+    font-size: 1.5rem;
   }
 }
 .section-transfer {
@@ -621,15 +641,21 @@ p {
 .section-transfer .section-box-1 {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 2rem;
 }
 .section-transfer .section-box-1 ul {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 0.5rem;
 }
 .section-transfer .section-box-1 ul li {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
@@ -639,10 +665,15 @@ p {
 .section-transfer .section-box-4 {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 3rem;
 }
 .section-transfer .section-box-4 .card-container {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 2rem;
   max-width: 30rem;
 }
@@ -664,7 +695,9 @@ p {
 }
 .section-testimonial .testimonial-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: stretch;
   gap: 1rem;
   padding: 3rem;
 }
@@ -677,12 +710,16 @@ p {
 }
 .section-testimonial .testimonial-container .card-container {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 1rem;
 }
 .section-testimonial .testimonial-container .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
   gap: 1rem;
   background-color: var(--clr-card-bg);
   width: 400px;
@@ -693,6 +730,9 @@ p {
 }
 .section-testimonial .testimonial-container .card .client-avatar {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 1rem;
 }
 .section-testimonial .testimonial-container .card .client-avatar strong {
@@ -707,8 +747,10 @@ p {
   top: 0;
   transform: translateY(-30px);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
   border-radius: 8px;
   background-color: #6366F1;
   width: 45px;
@@ -723,14 +765,18 @@ p {
 .section-faq {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0;
   text-align: center;
   padding-top: 7rem;
 }
 .section-faq .faq-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  gap: 0;
 }
 .section-faq .faq-container .heading {
   max-width: 22rem;
@@ -751,14 +797,18 @@ p {
 }
 .section-faq .faq-container .accordion article label {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  gap: 0;
   padding: 1.7rem 1.9rem 1rem 1.9rem;
 }
 .section-faq .faq-container .accordion article label #btn-arrow {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 0;
   justify-self: flex-end;
   width: 36px;
   height: 36px;
@@ -797,12 +847,18 @@ p {
 .section-faq .faq-container .accordion input[type=radio]:checked ~ div {
   max-height: 500px;
 }
+.section-faq .faq-container .accordion input[type=radio]:checked ~ label #btn-arrow {
+  transform: rotate(180deg);
+  background-color: var(--brand-primary);
+  color: white;
+}
 .section-faq .faq-container .contact-card-container {
   display: none;
 }
 .section-faq .faq-container .contact-card-container .contact-card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: flex-start;
   gap: 1rem;
   flex-grow: 1;
@@ -815,16 +871,20 @@ p {
   font-size: 0.875rem;
 }
 .section-faq .faq-container .contact-card-container .card-1 a {
-  color: #6366F1;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  color: #6366F1;
 }
 .section-faq .faq-container .contact-card-container .card-2 a {
-  color: #22C55E;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  color: #22C55E;
 }
 .section-faq .faq-container .btn-contact-us {
   width: 9rem;
@@ -837,8 +897,10 @@ p {
 }
 .section-faq .faq-container .btn-contact-us span {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 0;
 }
 .section-faq .sub-container {
   width: 100%;
@@ -846,10 +908,11 @@ p {
   background-color: var(--clr-seconday-bg);
   border-radius: 8px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
   text-align: left;
 }
 .section-faq .sub-container h2 {

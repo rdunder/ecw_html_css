@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 
 .section-transfer {
     padding: 5rem 0;
@@ -17,20 +18,13 @@
     
 
     .section-box-1 {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        @include mix.flex($d: column, $g: 2rem);
 
         ul {
-
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            @include mix.flex($d: column, $g: 0.5rem);
 
             li {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
+                @include mix.flex($a: center, $g: 0.5rem);
 
                 i {
                     color: var.$brandPrimary;
@@ -47,14 +41,10 @@
     // }
 
     .section-box-4 {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
+        @include mix.flex($d: column, $g: 3rem);
 
         .card-container {
-            
-            display: flex;
-            gap: 2rem;
+            @include mix.flex($g: 2rem);
             max-width: 30rem;
 
             img {

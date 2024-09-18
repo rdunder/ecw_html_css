@@ -1,13 +1,12 @@
-@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as mix;
+@use "../base/root-vars" as *;
 
 .btn-primary {
-    background-color: $brandPrimary;
-    color: $gray100;
+    @include mix.flex(row, center, center);
+    background-color: var(--brand-primary);
+    color: var(--gray-100);
     border-radius: 8px;
     padding: 12px 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-decoration: none;
     opacity: 1;
     transition: opacity 0.4s;

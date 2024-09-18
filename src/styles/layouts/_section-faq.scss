@@ -1,17 +1,14 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 @use "../base/root-vars" as *;
 
 .section-faq {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include mix.flex($d: column, $a: center);
     text-align: center;
     padding-top: 7rem;
 
     .faq-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include mix.flex($d: column, $a: center);
 
         .heading {
             max-width: 22rem;
@@ -26,23 +23,18 @@
 
         .accordion {
             text-align: left;
-            border-radius: 8px;
-            
+            border-radius: 8px;           
 
             article {
                 background-color: var(--clr-card-bg);
                 border: 1px solid var(--clr-border-accordion);
 
                 label {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
+                    @include mix.flex($j: space-between, $a: center);
                     padding: 1.7rem 1.9rem 1rem 1.9rem;
                     
                     #btn-arrow {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        @include mix.flex($j: center, $a: center);
                         justify-self: flex-end;
     
                         width: 36px;
@@ -55,6 +47,7 @@
                         background-color: var(--clr-seconday-bg);
                         color: var(--clr-text-heading);
                         pointer-events: none;
+
                     }
                 }
     
@@ -90,6 +83,12 @@
                 &:checked ~ div {
                     max-height: 500px;
                 }
+
+                &:checked ~ label #btn-arrow {
+                    transform: rotate(180deg);
+                    background-color: var(--brand-primary);
+                    color: white;
+                }
             }
         }   
 
@@ -97,11 +96,7 @@
             display: none;            
 
             .contact-card {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-
+                @include mix.flex($d: column, $a: flex-start, $g: 1rem);
                 flex-grow: 1;
 
                 border: 1px solid #E2E5F1;
@@ -117,19 +112,15 @@
 
             .card-1 {
                 a {
+                    @include mix.flex($a: center, $g: 1rem);
                     color: #6366F1;
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
                 }
             }
 
             .card-2 {
                 a {
+                    @include mix.flex($a: center, $g: 1rem);
                     color: #22C55E;
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
                 }
             }
         }
@@ -145,9 +136,7 @@
             margin: 3rem;
             
             span {
-                display: flex;
-                justify-content: center;            
-                align-items: center;
+                @include mix.flex($j: center, $a: center);
             }
         }
     }
@@ -159,11 +148,8 @@
         background-color: var(--clr-seconday-bg);
         border-radius: 8px;
 
-        display: flex;
+        @include mix.flex($j: center, $a: center, $g: 1rem);
         flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
 
         text-align: left;
 

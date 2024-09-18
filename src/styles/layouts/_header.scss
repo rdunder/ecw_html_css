@@ -1,11 +1,10 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins" as mix;
 @use "../base/root-vars" as *;
 @use "../components/darkmode-switch";
 @use "../components/btn-primary";
 @use "../components/btn-mobile";
 @use "../components/btn-app-store";
-
-@use "../base/root-vars" as *;
 
 .header {
     // background-image: variables.$headerGradient;
@@ -14,6 +13,7 @@
 }
 
 .navbar {
+    //  Cant get the sticy to work so it looks nice
     // position: sticky;
     // top: 0;
     // z-index: 5;
@@ -24,9 +24,8 @@
     gap: 1.5rem;
 
     .header-top-logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+        @include mix.flex($a: center, $g: 0.5rem);
+
         h3 {
             color: var(--clr-text-heading);
             font-size: 1.28rem;
@@ -74,19 +73,13 @@
     }
 
     .btn-store-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+        @include mix.flex($d: column, $a: center, $g: 0.5rem);
     }
     
 
     .btn-discover-more {
         padding: 2rem 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
+        @include mix.flex($j: center, $a: center, $g: 1rem);
         flex-shrink: 0;
 
         span {

@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
 @use "../base/root-vars" as *;
 
 
@@ -7,9 +8,7 @@
     padding: 5rem 0;
 
     .testimonial-container {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
+        @include mix.flex($j: space-between, $g: 1rem);
         padding: 3rem;
     
         h2 {
@@ -22,15 +21,11 @@
         }
 
         .card-container {
-            display: flex;
-            gap: 1rem;
+            @include mix.flex($g: 1rem);
         }
     
         .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 1rem;
+            @include mix.flex($d: column, $j: space-between, $g: 1rem);
 
             background-color: var(--clr-card-bg);
             width: 400px;
@@ -41,8 +36,7 @@
             position: relative;
 
             .client-avatar {
-                display: flex;
-                gap: 1rem;
+                @include mix.flex($g: 1rem);
 
                 strong {
                     color: var(--clr-text-heading);
@@ -59,9 +53,7 @@
                 top: 0;
                 transform: translateY(-30px);
 
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include mix.flex($j: center, $a: center);
 
                 border-radius: 8px;
 
