@@ -340,8 +340,7 @@ p {
   .header-content {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     row-gap: 0;
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
     padding-top: 5rem;
   }
   .header-content h1 {
@@ -383,8 +382,7 @@ p {
   }
   .header-content .iphone-header-img img {
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     display: block;
   }
 }
@@ -836,9 +834,7 @@ p {
   padding: 0.5rem;
 }
 .section-faq .faq-container .accordion input[type=radio] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   position: fixed;
   top: -100vh;
   left: -100vh;
@@ -994,8 +990,7 @@ p {
 @media (min-width: 1200px) {
   .section-faq .faq-container {
     display: grid;
-    -moz-column-gap: 8rem;
-         column-gap: 8rem;
+    column-gap: 8rem;
     grid-template-areas: "h a a a" "c a a a" "- a a a" "- a a a";
   }
   .section-faq .faq-container .heading {
