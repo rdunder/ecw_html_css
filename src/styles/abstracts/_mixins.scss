@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as var;
+
 @mixin flex-center() {
     display: flex;
     justify-content: center;
@@ -19,8 +21,30 @@
     gap: $g;
 }
 
-@mixin test() {
-    background-color: black;
-    
+
+
+@mixin mixinBtn($borderRadius: 0, $decorateHover: none) {
+    border: none;
+    border-radius: $borderRadius;
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: $decorateHover;
+    }
 }
+
+@mixin mixinBtnPrimary() {
+    @include mixinBtn(0.5em, underline);
+
+    background-color: var.$brandPrimary; 
+    color: var.$gray100;
+    padding: 0.8em 2em;
+
+    &:hover {
+        background-color: lighten(saturate(var.$brandPrimary, 1.09), 10.39);
+    }
+}
+
+
 
